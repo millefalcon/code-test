@@ -34,6 +34,8 @@ Run
 
 Using input file::
 
+   $ ls
+   core.py  input1.txt  input2.txt  LICENSE  README.rst  test.py
    $ cat input1.txt 
    AIR ROZO
    LAND FAIJWJSOOFAMAU
