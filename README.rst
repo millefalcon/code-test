@@ -36,19 +36,23 @@ Using input file::
 
    $ ls
    core.py  input1.txt  input2.txt  LICENSE  README.rst  test.py
+   $
    $ cat input1.txt 
    AIR ROZO
    LAND FAIJWJSOOFAMAU
    ICE STHSTSTVSASOS
    $
+   $
    $ python3 core.py input1.txt 
    SPACE AIR LAND ICE
+   $
    $
    $ cat input2.txt 
    AIR OWLAOWLBOWLC
    LAND OFBBMUFDICCSO
    ICE VTBTBHTBBBOBAB
    WATER SUMMER IS COMING
+   $
    $
    $ python3 core.py input2.txt 
    NONE
