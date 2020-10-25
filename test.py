@@ -2,7 +2,7 @@ import unittest
 import io
 import textwrap
 
-from core import get_allies, is_ally, _load_from, _rotate_left
+from core import decrypt, get_allies, is_ally, _load_from, _rotate_left
 
 
 class TameOfThronesTestCase(unittest.TestCase):
@@ -10,7 +10,22 @@ class TameOfThronesTestCase(unittest.TestCase):
         data = []
         self.assertEqual(get_allies(data), [])
 
-    def test_success(self):
+    def test_decryption(self):
+        params = [
+                ("air", "rozo", "olwl"),
+                ("land", "faijwjsoofamau", "avderenjjavhvp"),
+                ("ice", "sthststvsasos", "lmalmlmoltlhl"),
+        ]
+        for kingdom, msg, expected in params:
+            self.assertEqual(decrypt(msg, kingdom), expected)
+
+    def test_raise_key_error(self):
+        kingdom = "non existing kingdom"
+        msg = "lorem ipsum"
+        with self.assertRaises(KeyError):
+            self.assertEqual(decrypt(msg, kingdom), expected)
+
+    def test_all_allies(self):
         data = [
                 ("air", "rozo"),
                 ("land", "faijwjsoofamau"),
