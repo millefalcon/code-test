@@ -1,5 +1,6 @@
 import argparse
 from collections import deque, Counter
+from typing import List, Tuple, TextIO
 
 
 KINGDOM_OF_SHAN = "SPACE"
@@ -85,7 +86,7 @@ def decrypt(msg: str, kingdom: str) -> str:
 
     For example:
         Say kingdom 'Air' has embelm 'owl'. Now the letters are to be rotated left 3 times,
-        since there are 3 characters in the string 'Air'. 
+        since there are 3 characters in the string 'Air'.
     """
     num = len(KINGDOM_TO_EMBLEM[kingdom.lower()])
     rotated_letters = _rotate_left(LETTERS, num)
@@ -117,7 +118,7 @@ def is_ally(kingdom: str, msg: str) -> bool:
     )
 
 
-def get_allies(input_data: list) -> list:
+def get_allies(input_data: List[Tuple[str, str]]) -> List[str]:
     """Get the ally names by decrypting the messages from the input_data
     and returns the list of allies found.
     """
@@ -128,7 +129,7 @@ def get_allies(input_data: list) -> list:
     return allies
 
 
-def _load_from(stream):
+def _load_from(stream: TextIO) -> List[Tuple[str, str]]:
     data = []
     for line in stream:
         line = line.rstrip()
@@ -140,7 +141,7 @@ def _load_from(stream):
     return data
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("infile", type=argparse.FileType("r"))
     args = parser.parse_args()
