@@ -20,7 +20,7 @@ Clone::
 
 General usage::
 
-   usage: core.py [-h] infile
+   usage: geektrust.py [-h] infile
 
    positional arguments:
      infile
@@ -35,7 +35,7 @@ Run
 Using input file::
 
    $ ls
-   core.py  input1.txt  input2.txt  LICENSE  README.rst  test.py
+   geektrust.py  input1.txt  input2.txt  LICENSE  README.rst  test.py
    $
    $ cat input1.txt 
    AIR ROZO
@@ -43,7 +43,7 @@ Using input file::
    ICE STHSTSTVSASOS
    $
    $
-   $ python3 core.py input1.txt 
+   $ python3 geektrust.py input1.txt 
    SPACE AIR LAND ICE
    $
    $
@@ -54,7 +54,7 @@ Using input file::
    WATER SUMMER IS COMING
    $
    $
-   $ python3 core.py input2.txt 
+   $ python3 geektrust.py input2.txt 
    NONE
 
 
