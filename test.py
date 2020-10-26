@@ -3,7 +3,7 @@ import io
 import textwrap
 import string
 
-from core import (
+from geektrust import (
     decrypt,
     get_allies,
     is_ally,
